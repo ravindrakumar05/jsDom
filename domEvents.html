@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+    #demo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    }
+    </style>
+</head>
+<body>
+    <button>click-me</button>
+    <script>
+    let manipulate = document.querySelector("button");
+    // console.log(manipulate)
+    manipulate.setAttribute('id','demo')
+    manipulate.style.padding = '10px';
+    manipulate.style.backgroundColor ='yellow'
+    manipulate.style.border = 'none'
+    manipulate.addEventListener('click',function(){
+    console.log("button clicked")
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="demo">This is DEMO Paragraph for DOM Manipulation</h1>
+    <script>
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~ DOM Manipulation ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // 1. Creating new Element
+
+    let ele = document.createElement('h2');
+    // console.log(ele)
+
+
+    // 2. Adding Content to newly Created Element
+
+
+    // Way 1:
+
+    ele.innerText = "This text was created in JS";
+
+    // Way 2:
+
+    // let content = document.createTextNode("Helllo world")
+    // ele.append(content)
+
+    
+    // 3. Displaying the newly created element in the body of our website
+
+
+    let parent = document.querySelector('#demo');
+    parent.append(ele)
+
+    // 4. Adding the newly created element before the parent element
+
+
+    // Way 1:
+
+    parent.insertAdjacentElement('afterend',ele)
+
+    // Way 2:
+
+    // parent.before(ele)
+
+    // 5 Chaning the element content
+
+    // way 1:
+
+    // ele.innerHTML ="I changed";
+
+    // Way 2:
+
+    // ele.replaceWith("Newly changed")
+
+
+    // 5. Removing the newly created element
+
+    // ele.remove()
+
+    // 6. Knowing the attributes 
+
+    // console.log(ele.attributes)
+
+    // 7. Adding the class to newly created element
+
+    // ele.classList.add("js-class")
+    // console.log(ele.attributes)
+    
+
+    // 8. Adding the style to the newly created Element using JS
+
+    // let nEle = document.querySelector(".js-class");
+    // nEle.style.color = "red"
+
+    // 9. To created classes and id's to newly created element
+    
+    // ele.setAttribute('id','new-id');
+    // ele.setAttribute('class','new-class');
+    // console.log(ele.className)
+
+    </script>
+</body>
+</html>
